@@ -9,6 +9,7 @@
 - Documented the side-by-side migration from the old local app so its database remains recoverable until verification is complete.
 - Documented private GHCR image pulls using Home Assistant registry credentials and a public metadata-only repository.
 - Added complete user and technical-support guides covering every workflow, system requirements, troubleshooting, diagnostics, backup, and recovery.
+- Fixed PDF invoice rows so long customer, project, and trip-charge descriptions expand vertically without overlapping their detail text.
 
 ## 2.4.0
 
