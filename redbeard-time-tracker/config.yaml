@@ -1,0 +1,24 @@
+name: "Redbeard Time Tracker"
+version: "2.5.0"
+slug: "redbeard_time_tracker"
+description: "Redbeard Solutions customer, project, billing, time, and mileage tracker."
+url: "https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant/tree/main/redbeard-time-tracker"
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: application
+boot: auto
+ingress: true
+ingress_port: 3000
+panel_icon: "mdi:clock-check-outline"
+panel_title: "Redbeard Time"
+map:
+  - type: addon_config
+    read_only: false
+environment:
+  DATA_DIR: /config
+  AUTH_MODE: none
+options: {}
+schema: {}
+image: "ghcr.io/itspaulknoll/redbeard-time-tracker"
