@@ -1,5 +1,5 @@
 name: "Redbeard Time Tracker"
-version: "2.5.0"
+version: "2.5.1"
 slug: "redbeard_time_tracker"
 description: "Redbeard Solutions customer, project, billing, time, and mileage tracker."
 url: "https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant/tree/main/redbeard-time-tracker"
@@ -12,7 +12,7 @@ boot: auto
 ingress: true
 ingress_port: 3000
 panel_icon: "mdi:clock-check-outline"
-panel_title: "Redbeard Time"
+panel_title: "Time Tracker"
 map:
   - type: addon_config
     read_only: false

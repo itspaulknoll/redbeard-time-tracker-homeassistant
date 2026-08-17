@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.1
+
+- Added the Redbeard Solutions logo and icon to the Home Assistant app card and app details.
+- Shortened the Home Assistant sidebar title to `Time Tracker`.
+- Separated mileage purposes and routes into readable lines so long route text no longer runs into the purpose.
+
 ## 2.5.0
 
 - Added a private, database-backed Business Profile for invoice business name, address, phone, email, payment instructions, thank-you message, and an optional PNG or JPEG logo.

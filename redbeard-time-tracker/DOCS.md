@@ -1,6 +1,6 @@
 # Redbeard Time Tracker
 
-Version 2.5.0 is a side-by-side migration release. It uses the production `redbeard_time_tracker` identity, removing the old test/modernization hostname. It also adds a private Business Profile and a validated database import workflow.
+Version 2.5.1 continues the production `redbeard_time_tracker` identity introduced in 2.5.0. It includes the Redbeard app artwork, a shorter sidebar title, and improved mileage route layout. The private Business Profile and validated database import workflow remain available.
 
 The application source and GHCR image can remain private. The separate public Home Assistant repository contains only app metadata, documentation, and this changelog.
 
@@ -12,7 +12,7 @@ For day-to-day use, see the [User Guide](https://github.com/itspaulknoll/redbear
 2. Go to **Settings → Download backup** and save the `.db` file somewhere safe.
 3. Record the entry, customer, and project counts shown under Installation.
 4. Leave the old app and its source folder installed until the migration is verified.
-5. Confirm the private `ghcr.io/itspaulknoll/redbeard-time-tracker:2.5.0` image build completed successfully.
+5. Confirm the private `ghcr.io/itspaulknoll/redbeard-time-tracker:2.5.1` image build completed successfully.
 
 ## Allow Home Assistant to pull the private image
 
@@ -29,7 +29,7 @@ Home Assistant stores this credential for private image pulls. Rotate it before 
 ## Recommended repository-source migration
 
 1. Add `https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant` as a Home Assistant app repository source.
-2. Refresh the app store and install **Redbeard Time Tracker 2.5.0** from that repository.
+2. Refresh the app store and install **Redbeard Time Tracker 2.5.1** from that repository.
 3. Open the new app. It will initially have an empty database.
 4. Go to **Settings → Import database**.
 5. Select the backup downloaded from the old app, check the confirmation box, and choose **Validate and import**.
@@ -42,7 +42,7 @@ The new hostname contains `redbeard-time-tracker` and no longer contains `time-t
 
 ## Local migration test
 
-To test before publishing the metadata repository, copy the generated `dist/redbeard-time-tracker-2-5` folder into the Home Assistant `addons` share under a new folder name. Do not overwrite the old source folder. Refresh local apps, install the 2.5.0 copy, and follow the same import and verification steps.
+To test before publishing the metadata repository, copy the generated `dist/redbeard-time-tracker-2-5-1` folder into the Home Assistant `addons` share under a new folder name. Do not overwrite the old source folder. Refresh local apps, install the 2.5.1 copy, and follow the same import and verification steps.
 
 ## Import safeguards
 
