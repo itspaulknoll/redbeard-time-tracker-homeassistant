@@ -1,6 +1,6 @@
 # Redbeard Time Tracker Technical Support
 
-This guide applies to Redbeard Time Tracker 2.5.1. Start with the troubleshooting table, then collect the diagnostic information near the end if the problem continues.
+This guide applies to Redbeard Time Tracker 2.5.2. Start with the troubleshooting table, then collect the diagnostic information near the end if the problem continues.
 
 For feature instructions, see the [User Guide](USER_GUIDE.md).
 
@@ -67,7 +67,7 @@ A healthy response contains status `ok` and the running version. The endpoint in
 A normal startup log includes lines similar to:
 
 ```text
-Redbeard Time Tracker 2.5.1 running at http://0.0.0.0:3000
+Redbeard Time Tracker 2.5.2 running at http://0.0.0.0:3000
 SQLite database: /config/timetracker.db
 ```
 
@@ -146,7 +146,7 @@ The in-app importer:
 
 After an import, compare entry, customer, and project counts and inspect representative time, mileage, and invoice records before removing the previous installation or backup.
 
-### Home Assistant 2.5 identity migration
+### Legacy Home Assistant 2.5 identity migration
 
 Version 2.5 uses the clean `redbeard_time_tracker` slug, so Home Assistant treats it as a new app with a different private data folder from the old test/modernization installation.
 

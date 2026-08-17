@@ -1,5 +1,5 @@
 name: "Redbeard Time Tracker"
-version: "2.5.1"
+version: "2.5.2"
 slug: "redbeard_time_tracker"
 description: "Redbeard Solutions customer, project, billing, time, and mileage tracker."
 url: "https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant/tree/main/redbeard-time-tracker"

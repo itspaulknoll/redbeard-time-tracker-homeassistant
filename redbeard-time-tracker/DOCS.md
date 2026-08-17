@@ -1,18 +1,27 @@
 # Redbeard Time Tracker
 
-Version 2.5.1 continues the production `redbeard_time_tracker` identity introduced in 2.5.0. It includes the Redbeard app artwork, a shorter sidebar title, and improved mileage route layout. The private Business Profile and validated database import workflow remain available.
+Version 2.5.2 is a routine update for the production `redbeard_time_tracker` app. It improves recovery from temporary loading errors and cleans up the release process and documentation. It does not change the database schema or Home Assistant app identity.
 
 The application source and GHCR image can remain private. The separate public Home Assistant repository contains only app metadata, documentation, and this changelog.
 
 For day-to-day use, see the [User Guide](https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant/blob/main/USER_GUIDE.md). For system requirements, logs, common errors, and recovery steps, see [Technical Support](https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant/blob/main/SUPPORT.md).
 
-## Before installing
+## Before updating
 
-1. Open the old Redbeard Time Tracker app.
+1. Open the installed Redbeard Time Tracker app.
 2. Go to **Settings → Download backup** and save the `.db` file somewhere safe.
 3. Record the entry, customer, and project counts shown under Installation.
-4. Leave the old app and its source folder installed until the migration is verified.
-5. Confirm the private `ghcr.io/itspaulknoll/redbeard-time-tracker:2.5.1` image build completed successfully.
+4. Confirm the private `ghcr.io/itspaulknoll/redbeard-time-tracker:2.5.2` image build completed successfully.
+
+## Normal repository update
+
+1. Go to **Settings → Apps → App store**.
+2. Use the three-dot menu and select **Check for updates**.
+3. Open the existing Redbeard Time Tracker app and confirm Latest version is **2.5.2**.
+4. Keep the Home Assistant backup option enabled and choose **Update**.
+5. After the app restarts, confirm Installed version is **2.5.2** and verify representative time and mileage records.
+
+Routine updates keep the same app identity and private `/config` data. Do not copy a local app folder, create another installation, or import the database again.
 
 ## Allow Home Assistant to pull the private image
 
@@ -26,23 +35,16 @@ In Home Assistant, open **Settings → Apps**, use the three-dot menu, and open 
 
 Home Assistant stores this credential for private image pulls. Rotate it before it expires.
 
-## Recommended repository-source migration
+## First repository installation
 
 1. Add `https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant` as a Home Assistant app repository source.
-2. Refresh the app store and install **Redbeard Time Tracker 2.5.1** from that repository.
-3. Open the new app. It will initially have an empty database.
-4. Go to **Settings → Import database**.
-5. Select the backup downloaded from the old app, check the confirmation box, and choose **Validate and import**.
-6. After the automatic reload, compare the entry, customer, and project counts with the old app.
-7. Complete **Settings → Business profile** with the invoice contact and payment details. These values are stored only in the imported SQLite database.
-8. Generate a test invoice and download a fresh database backup.
-9. Only after all checks pass, stop and uninstall the old app and remove its old local source folder.
+2. Refresh the app store and install **Redbeard Time Tracker** from that repository.
+3. Start the app and complete **Settings → Business profile**.
+4. If migrating existing data, use **Settings → Import database** with a direct `.db` backup and verify record counts afterward.
 
-The new hostname contains `redbeard-time-tracker` and no longer contains `time-tracker-modernization-test`. Repository installations may still include Home Assistant's repository identifier before the clean slug.
+## Legacy migration from a local app
 
-## Local migration test
-
-To test before publishing the metadata repository, copy the generated `dist/redbeard-time-tracker-2-5-1` folder into the Home Assistant `addons` share under a new folder name. Do not overwrite the old source folder. Refresh local apps, install the 2.5.1 copy, and follow the same import and verification steps.
+The production identity introduced in 2.5.0 is separate from older local test/modernization installations. If one remains, download a database backup from the local app, import it into the repository-managed app, verify the data and a test invoice, then download a fresh backup. Only after those checks should the old local app be uninstalled and its old source folder removed. This is a one-time migration, not part of routine updates.
 
 ## Import safeguards
 
@@ -54,6 +56,6 @@ To test before publishing the metadata repository, copy the generated `dist/redb
 
 ## Rollback
 
-If verification fails, stop the new app and start the old app again. The migration never changes the old app's private data. Keep both the original downloaded backup and the automatically retained pre-import backup until the new installation has been used successfully.
+If an update fails, keep the existing installation in place and inspect the app and Supervisor logs before retrying. If the updated app starts but data is not as expected, stop making changes and preserve the downloaded database and Home Assistant backup before restoring anything.
 
 This release does not request location permission or run a background location watcher. Historical route-derived mileage remains available in reports and exports, while all new trips use odometer readings.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.5.2
+
+- Fixed the connection notice so a temporary loading error remains visible until recovery and clears after a successful retry.
+- Made the local Home Assistant bundle name follow the package version automatically instead of retaining a stale version number.
+- Preserved the public repository's Git metadata when regenerating its bundle, simplifying repeat releases.
+- Replaced completed migration instructions with the normal repository-managed update workflow while retaining legacy migration guidance for reference.
+
 ## 2.5.1
 
 - Added the Redbeard Solutions logo and icon to the Home Assistant app card and app details.

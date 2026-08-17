@@ -1,6 +1,6 @@
 # Redbeard Time Tracker User Guide
 
-This guide applies to Redbeard Time Tracker 2.5.1. It covers the Home Assistant, Docker, and standalone versions; the features are the same in each installation.
+This guide applies to Redbeard Time Tracker 2.5.2. It covers the Home Assistant, Docker, and standalone versions; the features are the same in each installation.
 
 ## What the app tracks
 
