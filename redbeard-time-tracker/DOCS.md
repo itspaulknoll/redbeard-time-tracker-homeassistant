@@ -4,6 +4,8 @@ Version 2.5.0 is a side-by-side migration release. It uses the production `redbe
 
 The application source and GHCR image can remain private. The separate public Home Assistant repository contains only app metadata, documentation, and this changelog.
 
+For day-to-day use, see the [User Guide](https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant/blob/main/USER_GUIDE.md). For system requirements, logs, common errors, and recovery steps, see [Technical Support](https://github.com/itspaulknoll/redbeard-time-tracker-homeassistant/blob/main/SUPPORT.md).
+
 ## Before installing
 
 1. Open the old Redbeard Time Tracker app.

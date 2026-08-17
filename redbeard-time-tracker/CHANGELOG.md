@@ -8,6 +8,7 @@
 - Changed the Home Assistant slug to `redbeard_time_tracker`, removing the old test/modernization hostname.
 - Documented the side-by-side migration from the old local app so its database remains recoverable until verification is complete.
 - Documented private GHCR image pulls using Home Assistant registry credentials and a public metadata-only repository.
+- Added complete user and technical-support guides covering every workflow, system requirements, troubleshooting, diagnostics, backup, and recovery.
 
 ## 2.4.0
 
